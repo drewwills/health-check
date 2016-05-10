@@ -18,6 +18,7 @@ public class HealthCheckRestController {
         final List<HealthStatus> rslt = new ArrayList<>();
         rslt.add(new HealthStatus("https://www.facebook.com/", "Facebook", true));
         rslt.add(new HealthStatus("https://www.yahoo.com/", "Yahoo!", true));
+        rslt.add(new HealthStatus("http://www.blackboard.com/", "Blackboard", false));
         return rslt;
     }
 
