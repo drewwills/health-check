@@ -1,5 +1,6 @@
-package org.apereo.portlet;
+package org.apereo.portlet.hc;
 
+import org.apereo.portlet.hc.HealthCheckApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -11,8 +12,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class HealthCheckApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
