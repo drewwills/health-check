@@ -23,6 +23,15 @@
         <portlet-info>
             <title>Health Check Portlet</title>
         </portlet-info>
+        <portlet-preferences>
+             <!-- URL of the REST service that provides the data;  default is
+                  the same webapp in which the portlet runs (in Tomcat), but can
+                  be changed to point to an independently-running Microservice. -->
+            <preference>
+                <name>serviceUrl</name>
+                <value>/health-check/api/v1-0/health-check</value>
+            </preference>
+        </portlet-preferences>
     </portlet>
 
 </portlet-app>
