@@ -42,7 +42,6 @@ public enum HealthCheckStrategy {
             logger.debug("Checking health of the service defined by the following JSON:  {}", json.toString());
 
             final String url = json.get(FIELD_NAME_URL).asText();
-            logger.debug("Performing a HEAD request on url={}", url);
 
             final HttpHead headMethod = new HttpHead(url);
             HttpResponse httpResponse;

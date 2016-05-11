@@ -9,6 +9,7 @@ import javax.annotation.PostConstruct;
 import org.apereo.portlet.hc.HealthCheckService;
 import org.apereo.portlet.hc.model.v1_0.HealthStatus;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,7 @@ public class HealthCheckServiceImpl implements HealthCheckService {
         }
     }
 
+    @Cacheable("healthCheckCache")
     @Override
     public List<HealthStatus> checkHealth() {
         final List<HealthStatus> rslt = new ArrayList<>();
