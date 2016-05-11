@@ -10,7 +10,7 @@
         "strategy": "HTTP_HEAD"
     },
     {
-        "url": "http://localhost:8080/not-a-real-url.wtf/",
+        "url": "http://localhost:8090/not-a-real-url.wtf/",
         "title": "Blackboard",
         "strategy": "HTTP_HEAD"
     }
