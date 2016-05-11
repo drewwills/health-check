@@ -46,7 +46,9 @@ public class HealthCheckServiceImpl implements HealthCheckService {
             final String strategyName = node.get(FIELD_NAME_STRATEGY).asText();
             final HealthCheckStrategy strategy = HealthCheckStrategy.valueOf(strategyName);
             final HealthStatus status = strategy.checkHealth(node);
-            rslt.add(status);
+            if (status != null) {
+                rslt.add(status);
+            }
         }
         return rslt;
     }

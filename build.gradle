@@ -29,12 +29,13 @@ repositories {
 
 
 dependencies {
+    compile("org.apache.httpcomponents:httpclient:${httpclientVersion}")
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.apereo.portlet:soffit:${soffitVersion}")
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     providedRuntime('org.apache.portals:portlet-api_2.1.0_spec:1.0')
-
 }
 
 
