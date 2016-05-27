@@ -36,6 +36,7 @@ dependencies {
     compile("org.apereo.portlet:soffit:${soffitVersion}")
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
+    providedRuntime('org.apache.tomcat.embed:tomcat-embed-jasper')
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     providedRuntime('org.apache.portals:portlet-api_2.1.0_spec:1.0')
 }
