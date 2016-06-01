@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = '1.3.4.RELEASE'
     }
     repositories {
+        // Surprised this declaration is needed given the general one below, but apparently it is.
         mavenCentral()
     }
     dependencies {
