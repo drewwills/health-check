@@ -33,6 +33,7 @@
 }
 </style>
 
+<!-- TODO:  Just calculate urlBase -->
 <script src="${properties['urlBase']}/js/health-check.js" type="text/javascript"></script>
 
 <div id="${n}">
@@ -47,11 +48,11 @@
             <div class="hc-items-container" style="display: none;">
                 <div class="alert alert-success hc-template-alive" role="alert" style="display: none;">
                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                    <a href="//www.yahoo.com" class="alert-link hc-link">Yahoo!</a>
+                    <a href="" class="alert-link hc-link"></a>
                 </div>
                 <div class="alert alert-danger hc-template-dead" role="alert" style="display: none;">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                    <a href="//www.yahoo.com" class="alert-link hc-link">Yahoo!</a>
+                    <a href="" class="alert-link hc-link"></a>
                 </div>
             </div>
         </div>
