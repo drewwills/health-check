@@ -30,9 +30,6 @@ import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 
 @SpringBootApplication
 @EnableCaching
@@ -63,15 +60,6 @@ public class HealthCheckApplication extends SpringBootServletInitializer {
     @Bean
     public SoffitRendererController soffitRendererController() {
         return new SoffitRendererController();
-    }
-
-    @Bean
-    public ViewResolver getViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setViewClass(JstlView.class);
-        resolver.setPrefix("");
-        resolver.setSuffix("");
-        return resolver;
     }
 
 }
