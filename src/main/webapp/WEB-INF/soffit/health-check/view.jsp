@@ -33,8 +33,9 @@
 }
 </style>
 
-<!-- TODO:  Just calculate urlBase -->
-<script src="${properties['urlBase']}/js/health-check.js" type="text/javascript"></script>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="urlBase" value="${req.scheme}://${req.serverName}:${req.localPort}${req.contextPath}" />
+<script src="${urlBase}/js/health-check.js" type="text/javascript"></script>
 
 <div id="${n}">
     <div class="panel panel-default">
@@ -62,7 +63,7 @@
 <script type="text/javascript">
 up.jQuery(function() {
     var options = {
-        serviceUrl: "${properties['urlBase']}${properties['apiUri']}"
+        serviceUrl: "${urlBase}/api/v1-0/health-check"
     };
     up.HealthCheck.Dashboard(up.jQuery, '#${n}', options);
 });
